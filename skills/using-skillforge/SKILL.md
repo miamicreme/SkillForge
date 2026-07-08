@@ -7,7 +7,7 @@ description: Applies the SkillForge Forge Loop before meaningful agent work. Use
 
 Use this skill whenever the user asks an agent to build, fix, audit, plan, research, consult, propose, launch, or ship work that should become a reusable artifact.
 
-## Purpose
+## Overview
 
 This is the SkillForge bootstrap. It tells the agent to use the Forge Loop before jumping into output.
 
