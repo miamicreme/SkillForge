@@ -1,5 +1,5 @@
 {
-  "name": "agent-skills",
-  "version": "1.0.0",
-  "description": "Production-grade engineering skills for AI coding agents."
+  "name": "skillforge",
+  "version": "0.1.0",
+  "description": "Reusable AI workflows, skills, playbooks, and quality gates for disciplined AI agents."
 }
