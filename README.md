@@ -24,13 +24,33 @@ The intended workflow is:
 
 ---
 
+## The Forge Loop
+
+The Forge Loop is SkillForge’s core methodology:
+
+> Research what matters. Forge the plan. Ship the work.
+
+| Stage | Purpose | Artifact |
+|---|---|---|
+| Signal | Gather outside evidence and context | SignalBrief or research notes |
+| Scope | Clarify the real objective and constraints | Problem statement and acceptance criteria |
+| Spec | Define what should exist when done | Spec, brief, or requirements doc |
+| Plan | Break the work into small verified slices | Task plan, branch plan, or recipe |
+| Build | Execute one useful slice at a time | Implementation or deliverable |
+| Prove | Verify before claiming completion | Tests, checks, citations, or review notes |
+| Ship | Deliver with risks and next steps visible | PR, summary, proposal, report, or handoff |
+
+See [`docs/forge-loop.md`](docs/forge-loop.md) for the full methodology and [`skills/using-skillforge/SKILL.md`](skills/using-skillforge/SKILL.md) for the bootstrap behavior agents should follow.
+
+---
+
 ## What SkillForge Adds
 
 The upstream skill foundation already covers the engineering lifecycle: define, plan, build, verify, review, and ship. SkillForge keeps that discipline and adds a product layer around it.
 
 | Layer | Purpose |
 |---|---|
-| `skills/` | Core agent skills and engineering workflows inherited from the upstream foundation |
+| `skills/` | Core agent skills and SkillForge bootstrap workflows |
 | `recipes/` | End-to-end workflows that combine multiple skills into repeatable outcomes |
 | `packs/` | Productized bundles for specific use cases, audiences, and paid services |
 | `references/` | Checklists and supporting quality bars used by skills and recipes |
@@ -46,7 +66,7 @@ The upstream skill foundation already covers the engineering lifecycle: define, 
 | [AI Consultant Pack](packs/ai-consultant/README.md) | Guides discovery, assessment, scope control, proposals, and follow-up | AI consultants and automation agencies |
 | [MVP Builder Pack](packs/mvp-builder/README.md) | Turns a product idea into a spec, plan, build slices, tests, and launch checklist | Founders and product builders |
 | [Business Ops Pack](packs/business-ops/README.md) | Maps internal workflows, SOPs, reports, automations, and AI assistant opportunities | Small businesses and operations teams |
-| SignalBrief Research Pack | Converts market/social intelligence into briefs, discovery notes, opportunity maps, and outreach angles | Consultants, founders, sales teams, recruiters, dealmakers |
+| [SignalBrief Research Pack](packs/signalbrief-research/README.md) | Converts market/social intelligence into briefs, discovery notes, opportunity maps, and outreach angles | Consultants, founders, sales teams, recruiters, dealmakers |
 
 ---
 
@@ -60,8 +80,8 @@ Recipes are higher-level playbooks that combine skills into a complete operating
 | [Client Discovery](recipes/client-discovery.md) | You need to run an AI consulting or automation discovery process |
 | [MVP Builder](recipes/mvp-builder.md) | You need to turn an idea into a buildable MVP plan |
 | [Business Ops](recipes/business-ops.md) | You need to assess a company’s workflows and automation opportunities |
-| SignalBrief-to-Proposal | You need to turn market intelligence into a client-ready proposal or pitch |
-| SignalBrief-to-MVP | You need to turn user pain and competitor research into a buildable product spec |
+| [SignalBrief to Proposal](recipes/signalbrief-to-proposal.md) | You need to turn market intelligence into a client-ready proposal or pitch |
+| [SignalBrief to MVP](recipes/signalbrief-to-mvp.md) | You need to turn user pain and competitor research into a buildable product spec |
 
 ---
 
@@ -77,6 +97,7 @@ npx skills add miamicreme/SkillForge --list
 Install individual skills:
 
 ```bash
+npx skills add miamicreme/SkillForge --skill using-skillforge
 npx skills add miamicreme/SkillForge --skill code-review-and-quality
 npx skills add miamicreme/SkillForge --skill test-driven-development
 npx skills add miamicreme/SkillForge --skill planning-and-task-breakdown
@@ -135,12 +156,19 @@ See [docs/roadmap.md](docs/roadmap.md).
 Near-term priorities:
 
 1. Finish SkillForge branding and attribution.
-2. Align SignalBrief as the research/briefing layer in the MiamiCreme workflow stack.
-3. Add install and reference verification.
-4. Expand the starter packs.
-5. Add recipe validation.
-6. Create demo audits, sample briefs, and sample outputs.
-7. Package paid/professional workflow templates later.
+2. Make the Forge Loop the mandatory workflow pattern.
+3. Align SignalBrief as the research/briefing layer in the MiamiCreme workflow stack.
+4. Add install and reference verification.
+5. Expand the starter packs.
+6. Add recipe validation.
+7. Create demo audits, sample briefs, and sample outputs.
+8. Package paid/professional workflow templates later.
+
+---
+
+## Competitive Analysis
+
+See [`docs/superpowers-competitive-analysis.md`](docs/superpowers-competitive-analysis.md) for the Superpowers benchmark and SkillForge differentiation strategy.
 
 ---
 
