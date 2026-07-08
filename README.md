@@ -2,9 +2,25 @@
 
 **Reusable AI workflows, skills, playbooks, and quality gates for disciplined AI agents.**
 
-SkillForge helps AI agents work with structure instead of chaos. It combines engineering skills, workflow recipes, reusable playbooks, and verification gates so agents can clarify requirements, plan work, build in slices, test behavior, review quality, and ship safely.
+SkillForge is MiamiCreme’s agent operating system for turning AI from a loose chat assistant into a repeatable delivery machine. It combines engineering skills, workflow recipes, reusable playbooks, productized service packs, and verification gates so agents can clarify requirements, plan work, build in slices, test behavior, review quality, and ship safely.
 
-SkillForge is built on the excellent [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) foundation and extends it with productized workflow packs for repo audits, AI consulting, MVP building, and business operations.
+SkillForge is built on the excellent [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) foundation and extends it with MiamiCreme-specific workflow packs for repo audits, AI consulting, MVP building, business operations, and SignalBrief-powered research.
+
+---
+
+## MiamiCreme AI Workflow Stack
+
+SkillForge is the playbook and quality layer. SignalBrief is the research and market-signal layer. Together they create a practical operating system for AI-assisted consulting, product building, and client delivery.
+
+| Product | Role | Primary Output |
+|---|---|---|
+| [`SkillForge`](https://github.com/miamicreme/SkillForge) | Agent workflow system | Specs, plans, implementation tasks, QA gates, audits, proposals |
+| [`SignalBrief`](https://github.com/miamicreme/signalbrief) | Social and market intelligence layer | Company, founder, competitor, buyer-pain, deal, and trend briefs |
+
+The intended workflow is:
+
+1. **SignalBrief finds the truth outside the building** — what people are saying, sharing, building, betting on, and complaining about.
+2. **SkillForge turns that intelligence into action** — specs, plans, branches, implementation prompts, outreach, proposals, and delivery gates.
 
 ---
 
@@ -18,11 +34,11 @@ The upstream skill foundation already covers the engineering lifecycle: define, 
 | `recipes/` | End-to-end workflows that combine multiple skills into repeatable outcomes |
 | `packs/` | Productized bundles for specific use cases, audiences, and paid services |
 | `references/` | Checklists and supporting quality bars used by skills and recipes |
-| `docs/` | Attribution, roadmap, comparison notes, and SkillForge-specific guidance |
+| `docs/` | Attribution, roadmap, comparison notes, brand positioning, and SkillForge-specific guidance |
 
 ---
 
-## First Four SkillForge Packs
+## SkillForge Packs
 
 | Pack | What it does | Best customer |
 |---|---|---|
@@ -30,6 +46,7 @@ The upstream skill foundation already covers the engineering lifecycle: define, 
 | [AI Consultant Pack](packs/ai-consultant/README.md) | Guides discovery, assessment, scope control, proposals, and follow-up | AI consultants and automation agencies |
 | [MVP Builder Pack](packs/mvp-builder/README.md) | Turns a product idea into a spec, plan, build slices, tests, and launch checklist | Founders and product builders |
 | [Business Ops Pack](packs/business-ops/README.md) | Maps internal workflows, SOPs, reports, automations, and AI assistant opportunities | Small businesses and operations teams |
+| SignalBrief Research Pack | Converts market/social intelligence into briefs, discovery notes, opportunity maps, and outreach angles | Consultants, founders, sales teams, recruiters, dealmakers |
 
 ---
 
@@ -42,7 +59,9 @@ Recipes are higher-level playbooks that combine skills into a complete operating
 | [Repo Audit](recipes/repo-audit.md) | You need to evaluate a repository and produce a production-readiness plan |
 | [Client Discovery](recipes/client-discovery.md) | You need to run an AI consulting or automation discovery process |
 | [MVP Builder](recipes/mvp-builder.md) | You need to turn an idea into a buildable MVP plan |
-| [Business Ops](recipes/business-ops.md) | You need to assess a company's workflows and automation opportunities |
+| [Business Ops](recipes/business-ops.md) | You need to assess a company’s workflows and automation opportunities |
+| SignalBrief-to-Proposal | You need to turn market intelligence into a client-ready proposal or pitch |
+| SignalBrief-to-MVP | You need to turn user pain and competitor research into a buildable product spec |
 
 ---
 
@@ -87,20 +106,25 @@ The inherited command layer maps to the development lifecycle.
 | Simplify the code | `/code-simplify` | Clarity over cleverness |
 | Ship to production | `/ship` | Safer launches through gates |
 
+SignalBrief currently keeps its inherited `/last30days` command while the branded `/signalbrief` command is planned.
+
 ---
 
-## SkillForge Positioning
+## Positioning
 
 SkillForge is not just a prompt pack. It is a workflow system for making agents behave like disciplined operators.
 
-The goal is to make AI agents:
+SignalBrief is not just a search tool. It is a market-intelligence layer for grounding decisions in real public signals.
 
-- ask better questions before building,
+Together, the MiamiCreme AI workflow stack should help agents:
+
+- find what matters before building or pitching,
+- ask better discovery questions,
 - break work into small verifiable tasks,
 - avoid skipping tests and quality gates,
 - surface risk instead of hiding it,
-- produce reusable plans, docs, and implementation prompts,
-- support productized services like audits, client discovery, and MVP buildouts.
+- produce reusable plans, docs, implementation prompts, and briefs,
+- support productized services like audits, client discovery, MVP buildouts, and market-intelligence reports.
 
 ---
 
@@ -111,11 +135,12 @@ See [docs/roadmap.md](docs/roadmap.md).
 Near-term priorities:
 
 1. Finish SkillForge branding and attribution.
-2. Add install and reference verification.
-3. Expand the four starter packs.
-4. Add recipe validation.
-5. Create demo audits and sample outputs.
-6. Package paid/professional workflow templates later.
+2. Align SignalBrief as the research/briefing layer in the MiamiCreme workflow stack.
+3. Add install and reference verification.
+4. Expand the starter packs.
+5. Add recipe validation.
+6. Create demo audits, sample briefs, and sample outputs.
+7. Package paid/professional workflow templates later.
 
 ---
 
@@ -124,6 +149,8 @@ Near-term priorities:
 SkillForge is based on [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills), used under the MIT License. See [docs/attribution.md](docs/attribution.md) for details.
 
 The original project provides the core engineering skill foundation. SkillForge adds workflow recipes, productized packs, and business-oriented agent operating patterns.
+
+SignalBrief is based on [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill), used under the MIT License, and is maintained separately in [`miamicreme/signalbrief`](https://github.com/miamicreme/signalbrief).
 
 ---
 
