@@ -4,23 +4,25 @@
 
 SkillForge is MiamiCreme’s agent operating system for turning AI from a loose chat assistant into a repeatable delivery machine. It combines engineering skills, workflow recipes, reusable playbooks, productized service packs, and verification gates so agents can clarify requirements, plan work, build in slices, test behavior, review quality, and ship safely.
 
-SkillForge is built on the excellent [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) foundation and extends it with MiamiCreme-specific workflow packs for repo audits, AI consulting, MVP building, business operations, and SignalBrief-powered research.
+SkillForge is built on the excellent [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills) foundation and extends it with MiamiCreme-specific workflow packs for repo audits, AI consulting, MVP building, business operations, SignalBrief-powered research, and FrameBrief-powered video intelligence.
 
 ---
 
 ## MiamiCreme AI Workflow Stack
 
-SkillForge is the playbook and quality layer. SignalBrief is the research and market-signal layer. Together they create a practical operating system for AI-assisted consulting, product building, and client delivery.
+SkillForge is the playbook and quality layer. SignalBrief is the market-signal layer. FrameBrief is the video-evidence layer. Together they create a practical operating system for AI-assisted consulting, product building, and client delivery.
 
 | Product | Role | Primary Output |
 |---|---|---|
 | [`SkillForge`](https://github.com/miamicreme/SkillForge) | Agent workflow system | Specs, plans, implementation tasks, QA gates, audits, proposals |
 | [`SignalBrief`](https://github.com/miamicreme/signalbrief) | Social and market intelligence layer | Company, founder, competitor, buyer-pain, deal, and trend briefs |
+| [`FrameBrief`](https://github.com/miamicreme/FrameBrief) | Video intelligence layer | Creative teardowns, demo briefs, bug repro briefs, launch notes, walkthrough briefs |
 
 The intended workflow is:
 
-1. **SignalBrief finds the truth outside the building** — what people are saying, sharing, building, betting on, and complaining about.
-2. **SkillForge turns that intelligence into action** — specs, plans, branches, implementation prompts, outreach, proposals, and delivery gates.
+1. **SignalBrief finds the conversation** — what people are saying, sharing, building, betting on, and complaining about.
+2. **FrameBrief watches the evidence** — what is visible and spoken inside videos, demos, walkthroughs, ads, and screen recordings.
+3. **SkillForge turns that intelligence into action** — specs, plans, branches, implementation prompts, outreach, proposals, and delivery gates.
 
 ---
 
@@ -32,12 +34,12 @@ The Forge Loop is SkillForge’s core methodology:
 
 | Stage | Purpose | Artifact |
 |---|---|---|
-| Signal | Gather outside evidence and context | SignalBrief or research notes |
+| Signal | Gather outside evidence and context | SignalBrief, FrameBrief, or research notes |
 | Scope | Clarify the real objective and constraints | Problem statement and acceptance criteria |
 | Spec | Define what should exist when done | Spec, brief, or requirements doc |
 | Plan | Break the work into small verified slices | Task plan, branch plan, or recipe |
 | Build | Execute one useful slice at a time | Implementation or deliverable |
-| Prove | Verify before claiming completion | Tests, checks, citations, or review notes |
+| Prove | Verify before claiming completion | Tests, checks, citations, timestamps, or review notes |
 | Ship | Deliver with risks and next steps visible | PR, summary, proposal, report, or handoff |
 
 See [`docs/forge-loop.md`](docs/forge-loop.md) for the full methodology and [`skills/using-skillforge/SKILL.md`](skills/using-skillforge/SKILL.md) for the bootstrap behavior agents should follow.
@@ -82,6 +84,7 @@ Recipes are higher-level playbooks that combine skills into a complete operating
 | [Business Ops](recipes/business-ops.md) | You need to assess a company’s workflows and automation opportunities |
 | [SignalBrief to Proposal](recipes/signalbrief-to-proposal.md) | You need to turn market intelligence into a client-ready proposal or pitch |
 | [SignalBrief to MVP](recipes/signalbrief-to-mvp.md) | You need to turn user pain and competitor research into a buildable product spec |
+| [Video to Brief](recipes/video-to-brief.md) | You need to turn video evidence into a timestamped brief, bug report, teardown, or walkthrough note |
 
 ---
 
@@ -127,7 +130,7 @@ The inherited command layer maps to the development lifecycle.
 | Simplify the code | `/code-simplify` | Clarity over cleverness |
 | Ship to production | `/ship` | Safer launches through gates |
 
-SignalBrief currently keeps its inherited `/last30days` command while the branded `/signalbrief` command is planned.
+SignalBrief currently keeps its inherited `/last30days` command while the branded `/signalbrief` command is planned. FrameBrief currently keeps its inherited `/watch` command while the branded `/framebrief` command is planned.
 
 ---
 
@@ -137,15 +140,18 @@ SkillForge is not just a prompt pack. It is a workflow system for making agents 
 
 SignalBrief is not just a search tool. It is a market-intelligence layer for grounding decisions in real public signals.
 
+FrameBrief is not just a video summarizer. It is a video-intelligence layer for grounding decisions in what was actually seen and heard.
+
 Together, the MiamiCreme AI workflow stack should help agents:
 
 - find what matters before building or pitching,
+- watch the evidence before summarizing or deciding,
 - ask better discovery questions,
 - break work into small verifiable tasks,
 - avoid skipping tests and quality gates,
 - surface risk instead of hiding it,
 - produce reusable plans, docs, implementation prompts, and briefs,
-- support productized services like audits, client discovery, MVP buildouts, and market-intelligence reports.
+- support productized services like audits, client discovery, MVP buildouts, video teardowns, and market-intelligence reports.
 
 ---
 
@@ -158,17 +164,20 @@ Near-term priorities:
 1. Finish SkillForge branding and attribution.
 2. Make the Forge Loop the mandatory workflow pattern.
 3. Align SignalBrief as the research/briefing layer in the MiamiCreme workflow stack.
-4. Add install and reference verification.
-5. Expand the starter packs.
-6. Add recipe validation.
-7. Create demo audits, sample briefs, and sample outputs.
-8. Package paid/professional workflow templates later.
+4. Align FrameBrief as the video-evidence layer in the MiamiCreme workflow stack.
+5. Add install and reference verification.
+6. Expand the starter packs.
+7. Add recipe validation.
+8. Create demo audits, sample briefs, and sample outputs.
+9. Package paid/professional workflow templates later.
 
 ---
 
 ## Competitive Analysis
 
 See [`docs/superpowers-competitive-analysis.md`](docs/superpowers-competitive-analysis.md) for the Superpowers benchmark and SkillForge differentiation strategy.
+
+See [`docs/claude-video-companion-analysis.md`](docs/claude-video-companion-analysis.md) for the FrameBrief / Claude Video companion strategy.
 
 ---
 
@@ -179,6 +188,8 @@ SkillForge is based on [`addyosmani/agent-skills`](https://github.com/addyosmani
 The original project provides the core engineering skill foundation. SkillForge adds workflow recipes, productized packs, and business-oriented agent operating patterns.
 
 SignalBrief is based on [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill), used under the MIT License, and is maintained separately in [`miamicreme/signalbrief`](https://github.com/miamicreme/signalbrief).
+
+FrameBrief is based on [`bradautomates/claude-video`](https://github.com/bradautomates/claude-video), used under the MIT License, and is maintained separately in [`miamicreme/FrameBrief`](https://github.com/miamicreme/FrameBrief).
 
 ---
 
