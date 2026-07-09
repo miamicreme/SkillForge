@@ -24,6 +24,8 @@ The intended workflow is:
 2. **FrameBrief watches the evidence** — what is visible and spoken inside videos, demos, walkthroughs, ads, and screen recordings.
 3. **SkillForge turns that intelligence into action** — specs, plans, branches, implementation prompts, outreach, proposals, and delivery gates.
 
+See [`docs/modular-architecture.md`](docs/modular-architecture.md) for the module-boundary plan that keeps these public products separate while allowing private EmpireOS to consume their outputs through adapters.
+
 ---
 
 ## The Forge Loop
@@ -165,11 +167,12 @@ Near-term priorities:
 2. Make the Forge Loop the mandatory workflow pattern.
 3. Align SignalBrief as the research/briefing layer in the MiamiCreme workflow stack.
 4. Align FrameBrief as the video-evidence layer in the MiamiCreme workflow stack.
-5. Add install and reference verification.
-6. Expand the starter packs.
-7. Add recipe validation.
-8. Create demo audits, sample briefs, and sample outputs.
-9. Package paid/professional workflow templates later.
+5. Keep each product separate through module boundaries and stable contracts.
+6. Add install and reference verification.
+7. Expand the starter packs.
+8. Add recipe validation.
+9. Create demo audits, sample briefs, and sample outputs.
+10. Package paid/professional workflow templates later.
 
 ---
 
