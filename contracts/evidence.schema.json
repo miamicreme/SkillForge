@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miamicreme/SkillForge/contracts/evidence.schema.json",
+  "title": "SkillForge Evidence Item",
+  "description": "Shared evidence item contract for facts, sources, assumptions, timestamps, and confidence notes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_type",
+    "source",
+    "claim",
+    "confidence"
+  ],
+  "properties": {
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "url",
+        "repo",
+        "file",
+        "transcript",
+        "frame",
+        "user_context",
+        "test_result",
+        "metric",
+        "assumption",
+        "manual_note"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "Optional timestamp for video/audio/frame evidence or event timing."
+    },
+    "location": {
+      "type": "string",
+      "description": "Optional line number, file path, URL fragment, frame number, or other locator."
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
