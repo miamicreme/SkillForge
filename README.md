@@ -57,8 +57,10 @@ The upstream skill foundation already covers the engineering lifecycle: define, 
 | `skills/` | Core agent skills and SkillForge bootstrap workflows |
 | `recipes/` | End-to-end workflows that combine multiple skills into repeatable outcomes |
 | `packs/` | Productized bundles for specific use cases, audiences, and paid services |
+| `contracts/` | Versioned artifact, evidence, and quality-gate schemas for module reuse |
+| `adapters/` | Boundary docs for connecting SignalBrief, FrameBrief, EmpireOS, DealFlow, and repo audits |
 | `references/` | Checklists and supporting quality bars used by skills and recipes |
-| `docs/` | Attribution, roadmap, comparison notes, brand positioning, and SkillForge-specific guidance |
+| `docs/` | Attribution, roadmap, comparison notes, brand positioning, governance, and architecture guidance |
 
 ---
 
@@ -87,6 +89,22 @@ Recipes are higher-level playbooks that combine skills into a complete operating
 | [SignalBrief to Proposal](recipes/signalbrief-to-proposal.md) | You need to turn market intelligence into a client-ready proposal or pitch |
 | [SignalBrief to MVP](recipes/signalbrief-to-mvp.md) | You need to turn user pain and competitor research into a buildable product spec |
 | [Video to Brief](recipes/video-to-brief.md) | You need to turn video evidence into a timestamped brief, bug report, teardown, or walkthrough note |
+
+---
+
+## Contracts and Governance
+
+SkillForge is contract-first so its modules can be reused safely across public products and private EmpireOS.
+
+| Area | File |
+|---|---|
+| Module boundaries | [`docs/modular-architecture.md`](docs/modular-architecture.md) |
+| Governance rules | [`docs/module-governance.md`](docs/module-governance.md) |
+| Core primitives | [`docs/primitives.md`](docs/primitives.md) |
+| Artifact schema | [`contracts/artifact.schema.json`](contracts/artifact.schema.json) |
+| Evidence schema | [`contracts/evidence.schema.json`](contracts/evidence.schema.json) |
+| Quality gate schema | [`contracts/quality-gate.schema.json`](contracts/quality-gate.schema.json) |
+| Adapter overview | [`adapters/README.md`](adapters/README.md) |
 
 ---
 
