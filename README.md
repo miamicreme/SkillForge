@@ -177,6 +177,8 @@ Near-term priorities:
 
 See [`docs/superpowers-competitive-analysis.md`](docs/superpowers-competitive-analysis.md) for the Superpowers benchmark and SkillForge differentiation strategy.
 
+See [`docs/claude-skills-competitive-analysis.md`](docs/claude-skills-competitive-analysis.md) for the claude-skills benchmark and why SkillForge should win on workflow clarity instead of catalog size.
+
 See [`docs/claude-video-companion-analysis.md`](docs/claude-video-companion-analysis.md) for the FrameBrief / Claude Video companion strategy.
 
 ---
