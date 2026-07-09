@@ -27,6 +27,14 @@ SkillForge keeps the engineering discipline and adds productized workflow layers
 | FrameBrief | Video and visual evidence intelligence | Timestamped video briefs, bug repro notes, creative teardowns, demo notes |
 | SkillForge | Workflow and delivery layer | Specs, plans, tasks, proposals, audits, QA gates, implementation handoffs |
 
+## Competitive Benchmarks
+
+SkillForge is being shaped against three useful benchmarks:
+
+- [`docs/superpowers-competitive-analysis.md`](superpowers-competitive-analysis.md) — methodology-first positioning.
+- [`docs/claude-skills-competitive-analysis.md`](claude-skills-competitive-analysis.md) — catalog breadth, multi-tool install support, and why SkillForge should stay outcome-focused.
+- [`docs/claude-video-companion-analysis.md`](claude-video-companion-analysis.md) — video evidence and FrameBrief strategy.
+
 ## Initial Differentiators
 
 SkillForge's first layer of differentiation is intentionally practical:
